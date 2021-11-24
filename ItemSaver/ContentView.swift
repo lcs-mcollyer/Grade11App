@@ -9,13 +9,31 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
+        
+        VStack{
+            VStack(alignment: .leading) {
+                TextField("",
+                          text: .constant(""),
+                          prompt: Text("Enter Link..."))
+                
+            }
             .padding()
+            VStack(alignment: .leading) {
+                TextField("",
+                          text: .constant(""),
+                          prompt: Text("Enter Price..."))
+                
+                
+                
+            }
+            .padding()
+        }
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+                .preferredColorScheme(.dark)
+        }
     }
 }
